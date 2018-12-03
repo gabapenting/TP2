@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <html lang="es">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Memotest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Mali|Pacifico|Pangolin" rel="stylesheet">
+</head>
+
+<body>
+    <div id="welcomeContainer">
+        <div id="greeting">
+            <h1>Memotest</h1>
+            <p>Hola👋! Vamos a jugar al Memotest</p>
+            <p>Pero antes de empezar...</p>
+            <p>Cual es tu nombre❓</p>
+            <input type="text" id="playerName" placeholder="(nombre)">
+            <p>Con que dificultad te gustaria jugar?</p>
+            <button class="lvl" id="easyLvl">FACIL</button> <br />
+            <button class="lvl" id="mediumLvl">INTERMEDIO</button> <br/>
+            <button class="lvl" id="hardLvl">EXPERTO</button>
+            <p id="warning" class="hide">UPS... El nombre es requerido.</p>
+        </div>
+    </div>
+
+    <div id="gameContainer" class="hide">
+        <h1>Memotest</h1>
+        <h2>Hola <span id="name"></span></h2>
+        <p>Encontra todos los pares en menos de <span id="attempts"></span> intentos</p>
+        <p>Nivel</p>
+        <p id="showChosenLvl"></span>
+            <div id="board">
+                <img id="1" data-id="1" src="../images/tapada.jpg">
+
+                <img id="2" data-id="2" src="../images/tapada.jpg">
+
+                <img id="3" data-id="3" src="../images/tapada.jpg">
+
+                <img id="4" data-id="4" src="../images/tapada.jpg">
+
+                <img id="5" data-id="5" src="../images/tapada.jpg">
+
+                <img id="6" data-id="6" src="../images/tapada.jpg">
+
+                <img id="7" data-id="7" src="../images/tapada.jpg">
+
+                <img id="8" data-id="8" src="../images/tapada.jpg">
+
+                <img id="9" data-id="9" src="../images/tapada.jpg">
+
+                <img id="10" data-id="10" src="../images/tapada.jpg">
+
+                <img id="11" data-id="11" src="../images/tapada.jpg">
+
+                <img id="12" data-id="12" src="../images/tapada.jpg">
+
+                <p id="counterContainer">Intentos: <span id="counter"></span> </p>
+            </div>
+
+    </div>
+    <div id="overlay" class="hide"></div>
+    <div id="finalModal" class="hide">
+        <p id="win" class="hide">GANASTE🎉! con <span id="attemptsLeft"></span> intentos restantes.</p>
+        <p id="loss" class="hide">Perdiste 😔</p>
+        <p>Ya podes volver a jugar.</p>
+        <button id="reload">VOLVER A JUGAR</button>
+        <table id="ranking">
+            <tr>
+                <th>NOMBRE</th>
+                <th>NIVEL</th>
+                <th>INTENTOS</th>
+            </tr>
+            <tr>
+                <td id="rankNames">
+                </td>
+                <td id="rankLevel">
+                </td>
+                <td id="rankAttempts">               
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
